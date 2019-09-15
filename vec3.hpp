@@ -9,6 +9,7 @@ class vec3
 public:
 	vec3() {};
 	vec3(float e0, float e1, float e2) { e[0] = e0; e[1] = e1; e[2] = e2; };
+	vec3(float t) { e[0] = t; e[1] = t; e[2] = t; };
 	inline float x() const { return e[0]; };
 	inline float y() const { return e[1]; };
 	inline float z() const { return e[2]; };
@@ -86,13 +87,13 @@ inline vec3 operator /(const vec3 & v1, const vec3 & v2)
 
 inline vec3 operator /(const vec3 & v, float t)
 {
-	return vec3(t / v.e[0], t / v.e[1], t / v.e[2]);
+	return vec3(v.e[0] / t, v.e[1] / t, v.e[1] / t);
 }
 
 inline float dot(const vec3 & v1, const vec3 & v2)
 {
 	return v1.e[0] * v2.e[0]
-		+ v2.e[1] * v2.e[1]
+		+ v1.e[1] * v2.e[1]
 		+ v1.e[2] * v2.e[2];
 }
 
