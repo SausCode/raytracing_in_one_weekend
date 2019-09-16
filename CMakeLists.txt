@@ -10,10 +10,10 @@ cmake_minimum_required (VERSION 3.8)
 
 
 # Add source to this project's executable.
-add_executable (${TARGET_NAME} "ray_tracing_in_one_weekend.cpp" "ray_tracing_in_one_weekend.h")
+add_executable (${TARGET_NAME} "ray_tracing_in_one_weekend.cpp" "ray_tracing_in_one_weekend.hpp")
 
 if(MSVC)
-  target_compile_options(${TARGET_NAME} PRIVATE /W4 /WX)
+  target_compile_options(${TARGET_NAME} PRIVATE /W4 /WX /02)
 else()
   target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
 endif()

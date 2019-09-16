@@ -45,8 +45,8 @@ vec3 color(const ray& r, hittable* world)
 
 
 int main() {
-	int nx = 200;
-	int ny = 100;
+	int nx = 800;
+	int ny = 400;
 	int ns = 100;
 	vec3 lower_left_corner(-2.0, -1.0, -1.0);
 	vec3 horizontal(4.0, 0.0, 0.0);
