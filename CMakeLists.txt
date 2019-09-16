@@ -13,9 +13,9 @@ cmake_minimum_required (VERSION 3.8)
 add_executable (${TARGET_NAME} "ray_tracing_in_one_weekend.cpp" "ray_tracing_in_one_weekend.hpp")
 
 if(MSVC)
-  target_compile_options(${TARGET_NAME} PRIVATE /W4 /WX /02)
+  target_compile_options(${TARGET_NAME} PRIVATE /W4)
 else()
-  target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+  target_compile_options(${TARGET_NAME} PRIVATE -Wall -Wextra -pedantic)
 endif()
 
 # TODO: Add tests and install targets if needed.
